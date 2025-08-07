@@ -1,0 +1,91 @@
+.players {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.player__wrapper {
+  margin-bottom: 30px;
+  height: 160px;
+}
+
+.progress__container {
+  background: #444;
+  border-radius: 8px;
+  height: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress__bar.progress__fill {
+  background: #f97316;
+  height: 100%;
+  width: 0%;
+  transition: width 0.25s ease;
+}
+
+/* Neuer Container für Playbutton + A/B Buttons nebeneinander */
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* Play Button */
+.play__pause__button {
+  background: #f97316;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 50%;
+  color: #222;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.play__pause__button:hover:not(:disabled) {
+  background: #fb923c;
+}
+
+.play__pause__button:disabled {
+  background: #bb7700;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* A/B Buttons */
+.ab__controls {
+  display: flex;
+  gap: 30px;
+}
+
+.ab__button {
+  background: #333;
+  color: #f97316;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid #f97316;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+  font-size: 18px;
+  box-shadow: 0 0 12px 2px rgba(249, 115, 22, 0.7);
+}
+
+.ab__button:hover:not(:disabled) {
+  background: #f97316;
+  color: #222;
+  box-shadow: 0 0 20px 4px rgba(249, 115, 22, 0.9);
+}
+
+.ab__button:disabled {
+  color: #666;
+  border-color: #666;
+  box-shadow: none;
+  cursor: not-allowed;
+}
